@@ -1,0 +1,20 @@
+<div class="card mb-3" style="max-width: 800px;">
+  <div class="row no-gutters">
+    <div class="col-md-7">
+      <%= image_tag asset_path('event.jpg'), class: "img-fluid", alt: "[event]" %>
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+        <h5 class="card-title"><%= @event.title %></h5>
+        <p class="card-text"><small><%= @event.datetime %></small></p>
+        <p class="card-text"><%= link_to @event.address,
+              "https://yandex.ru/maps/?text=#{@event.address}" %></p>
+        <p><%= @event.description %></p>
+        <% if current_user_can_edit?(@event) %>
+          <%= link_to 'Изменить', edit_event_path(@event),
+              class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

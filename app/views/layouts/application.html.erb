@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bbq</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <%= render "layouts/header" %>
+    </header>
+    <div class="container">  
+      <div class="row mt-4">
+        <div class="col-md-8 mb-4">
+          <%= yield %>
+        </div>
+        <div class="col-md-4 mb-4">
+
+        </div>
+      </div>
+    </div>
+    <footer>
+      <%= render "layouts/footer" %>
+    </footer>
+  </body>
+</html>
