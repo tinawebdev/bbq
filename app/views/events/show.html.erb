@@ -6,7 +6,7 @@
     <div class="col-md-5">
       <div class="card-body">
         <h5 class="card-title"><%= @event.title %></h5>
-        <p class="card-text"><small><%= @event.datetime %></small></p>
+        <p class="card-text"><small><%= l @event.datetime, format: :short %></small></p>
         <p class="card-text"><%= link_to @event.address,
               "https://yandex.ru/maps/?text=#{@event.address}" %></p>
         <p><%= @event.description %></p>
