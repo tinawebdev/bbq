@@ -45,7 +45,7 @@ ru:
         send_me_reset_password_instructions: 'Выслать новый пароль'
     registrations:
       edit:
-        are_you_sure: 'Вы уверены? Все ваши данные будут уничтожены'
+        are_you_sure: 'Вы уверены?'
         cancel_my_account: 'Удалить учетную запись'
         currently_waiting_confirmation_for: 'Ожидается подтверждение адреса E-mail'
         leave_blank_if_you_don_t_want_to_change_it: 'оставьте поле пустым, если не хотите его менять'
