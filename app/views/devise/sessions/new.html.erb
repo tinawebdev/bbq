@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Войти</h3>
+  <h3><%= t('devise.links.sign_in') %></h3>
   <div class="card mt-3">
     <div class="card-body bg-light">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -22,7 +22,7 @@
         <% end %>
 
         <div class="form-group">
-          <%= f.submit "Войти", class: 'btn btn-primary' %>
+          <%= f.submit t('devise.links.sign_in'), class: 'btn btn-primary' %>
         </div>
       <% end %>
 

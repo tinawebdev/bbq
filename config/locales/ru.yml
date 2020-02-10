@@ -24,6 +24,34 @@ ru:
     users:
       updated: 'Вы обновили свой профиль'
   
+  devise:
+    links:      
+      back: Назад
+      delete: Удалить
+      create: Создать
+      forgot_your_password: Забыли пароль?
+      save: Сохранить
+      sign_in: Войти
+      sign_up: Регистрация
+    passwords:
+      edit:
+        change_my_password: Изменить мой пароль
+        change_your_password: Изменить пароль
+        confirm_new_password: Повторите новый пароль
+        new_password: Новый пароль
+      new:
+        forgot_your_password: Забыли пароль?
+        send_me_reset_password_instructions: Выслать новый пароль
+    registrations:
+      edit:
+        cancel_my_account: Удалить учетную запись
+        leave_blank_if_you_don_t_want_to_change_it: оставьте поле пустым, если не хотите его менять
+        minimum_password_length: знаков минимум
+        update: Обновить
+        we_need_your_current_password_to_confirm_your_changes: введите текущий пароль для подтверждения изменений
+      new:
+        sign_up: Регистрация
+
   messages:      
     not_saved:
       few: "сохранение не удалось из-за %{count} ошибок:"

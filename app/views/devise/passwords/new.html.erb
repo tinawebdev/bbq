@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Забыли пароль?</h3>
+  <h3><%= t('.forgot_your_password') %></h3>
   <div class="card mt-3">
     <div class="card-body bg-light">
 
@@ -12,7 +12,7 @@
         </div>
 
         <div class="form-group">
-          <%= f.submit "Отправить инструкцию по восстановлению", class: 'btn btn-primary' %>
+          <%= f.submit t('.send_me_reset_password_instructions'), class: 'btn btn-primary' %>
         </div>
       <% end %>
 

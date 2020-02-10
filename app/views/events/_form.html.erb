@@ -22,7 +22,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
+    <%= f.submit t('devise.links.save'), class: 'btn btn-primary' %>
+    <p class="mt-2"><%= link_to t('devise.links.back'), :back %></p>
   </div>
 <% end %>
