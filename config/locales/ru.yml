@@ -32,6 +32,7 @@ ru:
       forgot_your_password: Забыли пароль?
       save: Сохранить
       sign_in: Войти
+      sign_out: Выйти
       sign_up: Регистрация
     passwords:
       edit:
@@ -52,9 +53,20 @@ ru:
       new:
         sign_up: Регистрация
 
-  messages:      
+  messages:          
     not_saved:
-      few: "сохранение не удалось из-за %{count} ошибок:"
-      many: "сохранение не удалось из-за %{count} ошибок:"
-      one: "сохранение не удалось из-за %{count} ошибки:"
-      other: "сохранение не удалось из-за %{count} ошибки:"
+      few: "Сохранение не удалось из-за %{count} ошибок:"
+      many: "Сохранение не удалось из-за %{count} ошибок:"
+      one: "Сохранение не удалось из-за %{count} ошибки:"
+      other: "Сохранение не удалось из-за %{count} ошибки:"
+
+  user:
+    edit_profile: "Редактировать профиль"
+    organized: "Организовал:"
+    profile: "Профиль"
+    user_has_not_organized_any_events_yet: "Пользователь пока не организовал ни одного события"
+  event:    
+    change: "Изменить"
+    event_editing: "Редактирование события"
+    events: "События"
+    new_event: "Создать новое событие"  
