@@ -1,0 +1,6 @@
+<%= image_tag(user_avatar(user), style: "width: 3.5rem;") %>  
+  <% if request.path == user_path(user) %>
+    <%= user.name %>
+  <% else %>
+    <%= link_to user.name, user_path(user) %>
+<% end %>

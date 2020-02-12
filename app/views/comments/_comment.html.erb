@@ -1,0 +1,21 @@
+<div class="card border-0">
+  <div class="card-header border-0">
+    <% if comment.user.present? %>
+      <strong><%= link_to comment.user.name, user_path(comment.user) %></strong>
+    <% else %>
+      <strong><%= comment.user_name %></strong>
+    <% end %>
+  </div>
+  <div class="card-body">
+    <p><%= comment.body %></p>
+    <div class="text-muted">
+      <em><%= l comment.created_at, format: :short %></em>
+      <% if current_user_can_edit?(comment) %>
+        <%= link_to(
+              fa_icon('trash'), event_comment_path(comment.event, comment),
+              method: :delete, data: {confirm: t('.destroy_confirm')}
+          ) %>
+      <% end %>
+    </div>
+  </div>
+</div>
