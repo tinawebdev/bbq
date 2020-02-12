@@ -44,14 +44,12 @@
   <div class="col-md-4 mb-4">
     <div class='card'>
       <div class="card-body">
-        <div class="border-bottom">
-            <h5><%= t('subscriptions.subscription.show_organizer') %></h5>
-          <div class="container mb-3">
+        <h5><%= t('subscriptions.subscription.show_organizer') %></h5>
+        <div class="container mb-3">
           <p><%= render partial: 'users/user', object: @event.user %></p>
-          </div>
         </div>
         <% if @event.subscribers.any? %>
-          <div class="mt-3">
+          <div class="mt-3 pt-3 border-top">
             <h5><%= t('subscriptions.subscription.show_subscribed') %></h5>
             <div class="container mb-3">
               <%= render partial: 'subscriptions/subscription',
