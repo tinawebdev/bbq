@@ -4,11 +4,14 @@ class SubscriptionsController < ApplicationController
 
   def create
     @new_subscription = @event.subscriptions.build(subscription_params)
-    @new_subscription.user = current_user
-  
-    if @new_subscription.user == @event.user
+    
+    unless current_user_can_subscribe?(@event)
       redirect_to @event, alert: t('controllers.subscriptions.can_not_subscribe')
-    elsif @new_subscription.save
+    end
+    
+    @new_subscription.user = current_user
+    
+    if @new_subscription.save
       redirect_to @event, notice: t('controllers.subscriptions.created')
     else
       render 'events/show', alert: t('controllers.subscriptions.error')
