@@ -98,3 +98,4 @@ ru:
       subscribe: 'Подписаться'
       show_organizer: 'Организатор'
       show_subscribed: 'Кто пойдет:'
+      email_used: 'уже используется'
