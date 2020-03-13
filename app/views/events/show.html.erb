@@ -1,11 +1,11 @@
 <div class="row mt-4">
   <div class="col-md-8 mb-4">
-    <div class="card mb-3" style="max-width: 800px;">
-      <div class="row no-gutters border-bottom">
-        <div class="col-md-7">
-          <%= image_tag asset_path('event.jpg'), class: "img-fluid", alt: "[event]" %>
+    <div class="card mb-3">
+      <div class="row no-gutters border-bottom"> 
+        <div class="col-md-7" style="height: 350px">
+          <%= image_tag(event_photo(@event), style: "width: inherit; height: inherit", alt: "[event]") %>        
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 overflow-auto" style="height: 350px">
           <div class="card-body">
             <h5 class="card-title"><%= @event.title %></h5>
             <p class="card-text"><small><%= l @event.datetime, format: :short %></small></p>
@@ -13,14 +13,26 @@
                   "https://yandex.ru/maps/?text=#{@event.address}" %></p>
             <p><%= @event.description %></p>
             <% if current_user_can_edit?(@event) %>
-              <%= link_to t('event.change'), edit_event_path(@event),
-                  class: 'btn btn-primary' %>
-              <%= link_to t('devise.links.delete'), event_path(@event), method: :delete,
-                              data:{confirm: t('devise.registrations.edit.are_you_sure')}, class: 'btn btn-danger' %>
+              <div class="mt-4">
+                <%= link_to t('event.change'), edit_event_path(@event),
+                    class: 'btn btn-primary' %>
+                <%= link_to t('devise.links.delete'), event_path(@event), method: :delete,
+                                data:{confirm: t('devise.registrations.edit.are_you_sure')}, class: 'btn btn-danger' %>
+             </div>
             <% end %>
           </div>
         </div>
       </div>
+
+      <div class="container mt-3 border-bottom">
+        <div class="m-2">
+          <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+        </div>
+        <div class="m-2">
+          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+        </div>
+      </div>
+
       <div class="container mt-3">
         <% if @event.comments.exists? %>
           <%= render partial: 'comments/comment',

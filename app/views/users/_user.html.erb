@@ -1,4 +1,4 @@
-<%= image_tag(user_avatar(user), style: "width: 3.5rem;") %>  
+<%= image_tag(user_avatar(user), class: "rounded-circle", style: "width: 3.5rem;") %>  
   <% if request.path == user_path(user) %>
     <%= user.name %>
   <% else %>

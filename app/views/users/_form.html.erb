@@ -12,6 +12,12 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :avatar %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="form-group">
     <%= f.submit t('devise.links.save'), class: 'btn btn-primary' %>
     <%= link_to t('devise.passwords.edit.change_your_password'), edit_user_registration_path, class: 'btn btn-secondary' %>
     <p class="mt-2"><%= link_to t('devise.links.back'), :back %></p>
