@@ -109,3 +109,4 @@ ru:
       email_used: 'уже используется'
   photos: 
     upload: 'Загрузить'
+    select: 'Выбрать'

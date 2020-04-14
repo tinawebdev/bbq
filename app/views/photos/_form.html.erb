@@ -2,11 +2,20 @@
   <%= render partial: 'partials/form_errors', locals: {model: photo} %>
 
   <div class="form-group">
-    <%= f.label :photo %>
-    <%= f.file_field :photo %>
-  </div>
+    <div class="d-inline-flex">
+      <div class="mr-2 align-self-center">
+        <span><%= f.label :photo %>:</span>
+      </div>
 
-  <div class="actions">
-    <%= f.submit t('photos.upload'), class: 'btn btn-primary' %>
+      <div>
+        <label class="btn btn-outline-primary mr-1">      
+          <%= f.file_field :photo, class: 'd-none' %> <%= t('photos.select') %>
+        </label>
+      </div>
+
+      <div class="actions">
+        <%= f.submit t('photos.upload'), class: 'btn btn-primary' %>
+      </div>
+    </div>
   </div>
 <% end %>
