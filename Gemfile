@@ -15,7 +15,7 @@ gem 'devise-i18n'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'rails-i18n', '~> 6.0.0'
-gem 'rmagick'
+gem 'rmagick', '~> 4.1', '>= 4.1.2'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
