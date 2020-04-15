@@ -25,4 +25,10 @@ class ApplicationController < ActionController::Base
   def current_user_can_subscribe?(event)
     current_user != event.user
   end
+
+  private
+
+  def check_captcha(model)
+    current_user.present? || verify_recaptcha(model: model)
+  end  
 end

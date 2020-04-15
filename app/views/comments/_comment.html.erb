@@ -4,18 +4,20 @@
       <strong><%= link_to comment.user.name, user_path(comment.user) %></strong>
     <% else %>
       <strong class="text-secondary"><%= comment.user_name %></strong>
-    <% end %>
-    <small class="text-secondary"><%= l comment.created_at, format: :short %></small>
+    <% end %>    
+    <div class="d-inline-flex">
+      <small class="text-secondary"><%= l comment.created_at, format: :short %></small>
+      <% if current_user_can_edit?(comment) %>
+        <div class="text-muted ml-3">
+          <%= link_to(
+                fa_icon('trash'), event_comment_path(comment.event, comment),
+                method: :delete, data: {confirm: t('.destroy_confirm')}
+            ) %>
+        </div>
+      <% end %>
+    </div>
   </div>
   <div class="card-body">
     <p><%= comment.body %></p>
-    <div class="text-muted">      
-      <% if current_user_can_edit?(comment) %>
-        <%= link_to(
-              fa_icon('trash'), event_comment_path(comment.event, comment),
-              method: :delete, data: {confirm: t('.destroy_confirm')}
-          ) %>
-      <% end %>
-    </div>
   </div>
 </div>

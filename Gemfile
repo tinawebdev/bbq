@@ -16,6 +16,8 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'rmagick', '~> 4.1', '>= 4.1.2'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'recaptcha'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'

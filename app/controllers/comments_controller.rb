@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @new_comment = @event.comments.build(comment_params)
     @new_comment.user = current_user
   
-    if @new_comment.save
+    if check_captcha(@new_comment) && @new_comment.save
       redirect_to @event, notice: t('controllers.comments.created')
     else
       render 'events/show', alert: t('controllers.comments.error')

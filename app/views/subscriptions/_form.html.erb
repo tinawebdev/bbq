@@ -15,6 +15,10 @@
     </div>
   <% end %>
 
+  <div class="mb-3">
+    <%= recaptcha_tags unless current_user.present? %>
+  </div>
+
   <div class="actions">
     <%= f.submit t('subscriptions.subscription.subscribe'), class: 'btn btn-primary' %>
   </div>
