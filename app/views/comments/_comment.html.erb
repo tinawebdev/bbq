@@ -1,15 +1,15 @@
 <div class="card border-0">
-  <div class="card-header border-0">
+  <div class="card-header border-0 d-flex justify-content-between">
     <% if comment.user.present? %>
       <strong><%= link_to comment.user.name, user_path(comment.user) %></strong>
     <% else %>
-      <strong><%= comment.user_name %></strong>
+      <strong class="text-secondary"><%= comment.user_name %></strong>
     <% end %>
+    <small class="text-secondary"><%= l comment.created_at, format: :short %></small>
   </div>
   <div class="card-body">
     <p><%= comment.body %></p>
-    <div class="text-muted">
-      <em><%= l comment.created_at, format: :short %></em>
+    <div class="text-muted">      
       <% if current_user_can_edit?(comment) %>
         <%= link_to(
               fa_icon('trash'), event_comment_path(comment.event, comment),
