@@ -1,7 +1,8 @@
 <div class="row mt-4">
   <div class="col-md-8 mb-4">
     <div class="card mb-3">
-      <div class="row no-gutters border-bottom"> 
+
+      <div class="row no-gutters bg-dark text-white"> 
         <div class="col-md-7" style="height: 350px">
           <%= image_tag(event_photo(@event), style: "width: inherit; height: inherit", alt: "[event]") %>        
         </div>
@@ -22,7 +23,7 @@
                   <% end %>
                 </div>
               </div>
-            </div>            
+            </div>
             <p class="card-text"><%= link_to @event.address,
                   "https://yandex.ru/maps/?text=#{@event.address}" %></p>
             <p><%= @event.description %></p>
@@ -30,7 +31,7 @@
         </div>
       </div>
 
-      <div class="container mt-3 border-bottom">
+      <div class="container pt-3 border-bottom bg-light">
         <% if user_signed_in? %>
           <div class="m-2">
             <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
@@ -52,7 +53,7 @@
         <% end %>
       </div>
 
-      <div class="container mb-3 mt-3 border-top">
+      <div class="container pb-3 mt-3 border-top bg-light">
         <div class="pt-3">
         <%= render partial: 'comments/form',
         locals: {comment: @new_comment || @event.comments.build} %>
@@ -62,7 +63,7 @@
   </div>
 
   <div class="col-md-4 mb-4">
-    <div class='card'>
+    <div class="card bg-light">
       <div class="card-body">
         <h5><%= t('subscriptions.subscription.show_organizer') %></h5>
         <div class="container mb-3">
@@ -74,7 +75,7 @@
             <div class="container mb-3">
               <%= render partial: 'subscriptions/subscription',
                 collection: @event.subscriptions.except(@new_subscription) %>
-            </div>        
+            </div>
           </div>
         <% end %>
         <% if current_user_can_subscribe?(@event) %>

@@ -110,3 +110,5 @@ ru:
   photos: 
     upload: 'Загрузить'
     select: 'Выбрать'
+  avatars:
+    set_avatar: 'Сменить аватар'

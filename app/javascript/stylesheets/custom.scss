@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  min-height: calc(100vh - 70px);
+}
+
+.footer {
+  height: 50px;
+}
