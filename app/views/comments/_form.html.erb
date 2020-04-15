@@ -4,14 +4,12 @@
 
     <% unless user_signed_in? %>
         <div class="form-group">
-          <%= f.label :user_name %>
-          <%= f.text_field :user_name, class: 'form-control' %>
+          <%= f.text_field :user_name, placeholder: t('comments.comment.user_name'), class: 'form-control' %>
         </div>
     <% end %>
 
     <div class="form-group">
-      <%= f.label :body %>
-      <%= f.text_area :body, class: 'form-control' %>
+      <%= f.text_area :body, placeholder: t('comments.comment.body'), class: 'form-control' %>
     </div>
 
     <div class="actions">

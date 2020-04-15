@@ -21,6 +21,7 @@ ru:
         body: 'Текст комментария:'
         user_name: 'Имя:'
       subscription:
+        user: 'Пользователь'
         user_name: 'Имя'
         user_email: 'Email'
         can_not_subscribe: 'Вы не можете подписаться на свое событие'
@@ -48,7 +49,7 @@ ru:
       destroyed: 'Вы удалили фотку'
   
   devise:
-    links:      
+    links:
       back: 'Назад'
       delete: 'Удалить'
       create: 'Создать'
@@ -78,7 +79,7 @@ ru:
       new:
         sign_up: 'Регистрация'
 
-  messages:          
+  messages:
     not_saved:
       few: 'Сохранение не удалось из-за %{count} ошибок:'
       many: 'Сохранение не удалось из-за %{count} ошибок:'
@@ -97,16 +98,20 @@ ru:
     new_event: 'Создать новое событие' 
   comments:
     comment:
+      body: 'Текст комментария'
+      user_name: 'Имя'
       destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
       send: 'Отправить'
       no_comments: 'Комментариев нет'
   subscriptions:
-    subscription:      
+    subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?' 
       subscribe: 'Подписаться'
       show_organizer: 'Организатор'
       show_subscribed: 'Кто пойдет:'
       email_used: 'уже используется'
+      your_name: 'Введите имя'
+      your_email: 'Введите email'
   photos: 
     upload: 'Загрузить'
     select: 'Выбрать'
