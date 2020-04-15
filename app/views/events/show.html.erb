@@ -6,24 +6,18 @@
         <div class="col-md-7" style="height: 350px">
           <%= image_tag(event_photo(@event), style: "width: inherit; height: inherit", alt: "[event]") %>        
         </div>
-        <div class="col-md-5 overflow-auto" style="height: 350px">
+        <div class="event-card col-md-5 overflow-auto" style="height: 350px">
           <div class="card-body">
-            <div class=row>
-              <div class="col-md-7">
-                <h5 class="card-title"><%= @event.title %></h5>
-                <p class="card-text"><small><%= l @event.datetime, format: :short %></small></p>
+            <h5 class="card-title"><%= @event.title %></h5>
+            <% if current_user_can_edit?(@event) %>
+              <div class="d-flex flex-wrap flex-column">
+                <%= link_to t('event.change'), edit_event_path(@event),
+                    class: 'btn btn-sm btn-primary mb-2 mr-1' %>
+                <%= link_to t('devise.links.delete'), event_path(@event), method: :delete,
+                                data:{confirm: t('devise.registrations.edit.are_you_sure')}, class: 'btn btn-sm btn-danger mb-2 mr-1' %>             
               </div>
-              <div class="col-md-5">
-                <div class="d-flex flex-wrap flex-column">
-                  <% if current_user_can_edit?(@event) %>
-                      <%= link_to t('event.change'), edit_event_path(@event),
-                          class: 'btn btn-sm btn-primary mb-2 mr-1' %>
-                      <%= link_to t('devise.links.delete'), event_path(@event), method: :delete,
-                                      data:{confirm: t('devise.registrations.edit.are_you_sure')}, class: 'btn btn-sm btn-danger mb-2 mr-1' %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
+            <% end %>
+            <p class="card-text"><small><%= l @event.datetime, format: :short %></small></p>
             <p class="card-text"><%= link_to @event.address,
                   "https://yandex.ru/maps/?text=#{@event.address}" %></p>
             <p><%= @event.description %></p>

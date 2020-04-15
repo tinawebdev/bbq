@@ -10,3 +10,11 @@ html, body {
 .footer {
   height: 50px;
 }
+
+.event-card::-webkit-scrollbar { width: 5px; height: 5px;}
+.event-card::-webkit-scrollbar-button {  background-color: #666; }
+.event-card::-webkit-scrollbar-track {  background-color: #999;}
+.event-card::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+.event-card::-webkit-scrollbar-thumb { height: 50px; background-color: #666;}
+.event-card::-webkit-scrollbar-corner { background-color: #999;}
+.event-card::-webkit-resizer { background-color: #666;}
