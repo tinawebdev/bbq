@@ -16,7 +16,7 @@
   <% end %>
 
   <div class="mb-3">
-    <%= recaptcha_tags unless current_user.present? %>
+    <%= recaptcha_tags size: 'compact' unless current_user.present? %>
   </div>
 
   <div class="actions">
