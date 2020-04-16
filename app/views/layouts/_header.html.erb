@@ -8,6 +8,7 @@
       <% if user_signed_in? %>
         <li class="nav-item"><%= link_to t('event.new_event'), new_event_path, class: "nav-link" %></li>
         <li class="nav-item"><%= link_to t('user.profile'), current_user, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to t('user.settings'), edit_user_path(current_user), class: "nav-link" %></li>
         <li class="nav-item"><%= link_to t('devise.links.sign_out'), destroy_user_session_path, class: "nav-link",
                 method: :delete %></li>
       <% else %>

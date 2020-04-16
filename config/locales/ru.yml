@@ -88,6 +88,7 @@ ru:
 
   user:
     edit_profile: 'Редактировать профиль'
+    settings: 'Настройки'
     organized: 'Организовал:'
     profile: 'Профиль'
     user_has_not_organized_any_events_yet: 'Пользователь пока не организовал ни одного события'
@@ -95,7 +96,7 @@ ru:
     change: 'Изменить'
     event_editing: 'Редактирование события'
     events: 'События'
-    new_event: 'Создать новое событие' 
+    new_event: 'Создать событие' 
   comments:
     comment:
       body: 'Текст комментария'

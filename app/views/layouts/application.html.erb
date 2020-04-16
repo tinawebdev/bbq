@@ -17,22 +17,20 @@
     <header>
       <%= render "layouts/header" %>
     </header>
-    <div class="content container">  
-      <div class="row mt-4">
-        <div class="col-md-12">
-          <% if flash.any? %>
-            <div id="error_explanation" class="alert alert-info alert-dismissible fade show" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <% flash.each do |name, message| %>
-                <%= content_tag :div, message %>
-              <% end %>
-            </div>
-          <% end %>
-          
-          <%= yield %>
-        </div>
+    <div class="content container">
+      <div class="mt-4">
+        <% if flash.any? %>
+          <div id="error_explanation" class="alert alert-info alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <% flash.each do |name, message| %>
+              <%= content_tag :div, message %>
+            <% end %>
+          </div>
+        <% end %>
+        
+        <%= yield %>
       </div>
     </div>
     <footer>
