@@ -10,6 +10,7 @@ require("channels")
 
 import '../stylesheets/application'
 import './bootstrap_custom.js'
+import 'components/lightbox/ekko-lightbox.min.js'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -21,3 +22,8 @@ import './bootstrap_custom.js'
 $(document).on("turbolinks:load", function() {
   $('.alert').alert()
 })
+
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});

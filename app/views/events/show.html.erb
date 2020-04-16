@@ -31,7 +31,7 @@
         </div>
       <% end %>
       <% if @event.photos.exists? %>
-        <div class="pt-3 pl-3 border-bottom bg-light">
+        <div class="pt-2 pl-4 border-bottom bg-light event-photos"">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
       <% end %>

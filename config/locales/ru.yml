@@ -112,7 +112,8 @@ ru:
       email_used: 'уже используется'
       your_name: 'Введите имя'
       your_email: 'Введите email'
-  photos: 
+  photos:
+    author: 'Автор'
     upload: 'Загрузить'
     select: 'Выбрать'
     add_photos_to_event: 'Добавить фотографии к событию:'
