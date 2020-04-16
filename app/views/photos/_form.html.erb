@@ -1,11 +1,10 @@
 <%= form_for [@event, photo], html: { multipart: true } do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: photo} %>
   <div class="form-group">
+    <div class="mr-2 mb-2 align-self-center">
+      <small><%= t('photos.add_photos_to_event') %></small>
+    </div>
     <div class="d-inline-flex">
-      <div class="mr-2 align-self-center">
-        <span><%= f.label :photo %>:</span>
-      </div>
-
       <div>
         <label class="btn btn-outline-primary mr-1">
           <%= f.file_field :photo, class: 'd-none' %> <%= t('photos.select') %>

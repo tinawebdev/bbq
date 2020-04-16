@@ -115,5 +115,7 @@ ru:
   photos: 
     upload: 'Загрузить'
     select: 'Выбрать'
+    add_photos_to_event: 'Добавить фотографии к событию:'
+    destroy_confirm: 'Вы уверены, что хотите удалить фото?'
   avatars:
     set_avatar: 'Сменить аватар'
