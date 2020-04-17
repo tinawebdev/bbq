@@ -1,9 +1,8 @@
 <div class="mt-2 mb-2 d-inline-flex">
   <div class="mr-3">
     <div>
-      <%= link_to content_tag('div', '', class: 'rounded event-photo',
-          style: "background-image: url(#{photo.photo.thumb.url}); width: 120px; height: 90px;"), photo.photo.url,
-          data: {toggle: 'lightbox', title: "#{t('photos.author')}: #{ link_to photo.user.name, photo.user }", gallery: 'event-photos'} %>
+      <%= link_to image_tag(photo.photo.thumb.url, class: "rounded", style: "object-fit: cover; width: 120px; height: 90px;"), photo.photo.url,
+      data: {toggle: 'lightbox', title: "#{t('photos.author')}: #{ link_to photo.user.name, photo.user }", gallery: 'event-photos'} %>
     </div>
     <div style="position: relative; top: -22px; right: -100px;">
       <% if current_user_can_edit?(photo) && photo.event.present? %>
