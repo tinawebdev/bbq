@@ -96,7 +96,8 @@ ru:
     change: 'Изменить'
     event_editing: 'Редактирование события'
     events: 'События'
-    new_event: 'Создать событие' 
+    new_event: 'Создать событие'
+    event_map: 'Место проведения'
   comments:
     comment:
       body: 'Текст комментария'
@@ -109,7 +110,7 @@ ru:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?' 
       subscribe: 'Подписаться'
       show_organizer: 'Организатор'
-      show_subscribed: 'Кто пойдет:'
+      show_subscribed: 'Кто пойдет'
       email_used: 'уже используется'
       your_name: 'Введите имя'
       your_email: 'Введите email'
