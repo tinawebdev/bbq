@@ -38,6 +38,7 @@ ru:
     comments:
       destroyed: 'Комментарий удален'
       created: 'Ваш комментарий добавлен'
+      updated: 'Ваш комментарий обновлен'
       error: 'Ошибка с комментарием'
     subscriptions:
       created: 'Вы подписаны на это событие'
@@ -103,10 +104,12 @@ ru:
   comments:
     comment:
       body: 'Текст комментария'
+      comment_editing: 'Редактирование комментария'
       user_name: 'Имя'
       destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
       send: 'Отправить'
       no_comments: 'Комментариев нет'
+      back: 'Вернуться назад'
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?' 

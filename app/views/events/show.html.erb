@@ -51,8 +51,8 @@
 
       <div class="container pb-3 mt-3 border-top bg-light">
         <div class="pt-3">
-        <%= render partial: 'comments/form',
-        locals: {comment: @new_comment || @event.comments.build} %>
+          <%= render partial: 'comments/form',
+          locals: {comment: @comment || @event.comments.build} %>
         </div>
       </div>
     </div>

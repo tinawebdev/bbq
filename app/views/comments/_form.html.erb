@@ -1,11 +1,11 @@
 <div class="container">
-  <%= form_for [@event, comment] do |f| %>
-    <%= render partial: 'partials/form_errors', locals: {model: comment} %>
+  <%= form_for [@event, @comment] do |f| %>
+    <%= render partial: 'partials/form_errors', locals: {model: @comment} %>
 
     <% unless user_signed_in? %>
-        <div class="form-group">
-          <%= f.text_field :user_name, placeholder: t('comments.comment.user_name'), class: 'form-control' %>
-        </div>
+      <div class="form-group">
+        <%= f.text_field :user_name, placeholder: t('comments.comment.user_name'), class: 'form-control' %>
+      </div>
     <% end %>
 
     <div class="form-group">

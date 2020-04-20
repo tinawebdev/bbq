@@ -9,6 +9,7 @@
       <small class="text-secondary"><%= l comment.created_at, format: :short %></small>
       <% if current_user_can_edit?(comment) %>
         <div class="text-muted ml-3">
+          <%= link_to(fa_icon('edit'), edit_event_comment_path(comment.event, comment)) %>
           <%= link_to(
                 fa_icon('trash'), event_comment_path(comment.event, comment),
                 method: :delete, data: {confirm: t('.destroy_confirm')}

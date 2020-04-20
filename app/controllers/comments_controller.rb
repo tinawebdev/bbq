@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController  
-  before_action :set_event, only: [:create, :destroy]
-  before_action :set_comment, only: [:destroy]
+  before_action :set_event, only: [:create, :update, :edit, :destroy]
+  before_action :set_comment, only: [:update, :edit, :destroy]
 
   def create
     @new_comment = @event.comments.build(comment_params)
@@ -8,6 +8,17 @@ class CommentsController < ApplicationController
   
     if check_captcha(@new_comment) && @new_comment.save
       redirect_to @event, notice: t('controllers.comments.created')
+    else
+      render 'events/show', alert: t('controllers.comments.error')
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @comment.update(comment_params)
+      redirect_to @event, notice: t('controllers.comments.updated')
     else
       render 'events/show', alert: t('controllers.comments.error')
     end
