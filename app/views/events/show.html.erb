@@ -20,7 +20,7 @@
             <% end %>
             <p class="card-text"><small><%= l @event.datetime, format: :short %></small></p>
             <p class="card-text"><%= link_to @event.address,
-                  "https://yandex.ru/maps/?text=#{@event.address}" %></p>
+                  "https://yandex.ru/maps/?text=#{@event.address}", target: "_blank" %></p>
             <p><%= @event.description %></p>
           </div>
         </div>
