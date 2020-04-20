@@ -7,7 +7,7 @@
           <%= content_tag 'div', '', class: 'card-img-top event-photo', alt: "[event]",
               style: "background-image: url(#{event_photo(@event)}); width: inherit; height: inherit;" %>
         </div>
-        <div class="event-card col-md-5 overflow-auto" style="height: 350px">
+        <div class="event-card col-md-5 overflow-auto" style="max-height: 350px">
           <div class="card-body">
             <h5 class="card-title"><%= @event.title %></h5>
             <% if current_user_can_edit?(@event) %>
