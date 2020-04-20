@@ -99,6 +99,7 @@ ru:
     new_event: 'Создать событие'
     event_map: 'Место проведения'
     event_expired: 'Событие прошло'
+    can_not_in_the_past: 'не могут быть ранее текущей даты'
   comments:
     comment:
       body: 'Текст комментария'
