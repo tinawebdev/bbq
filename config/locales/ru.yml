@@ -98,6 +98,7 @@ ru:
     events: 'События'
     new_event: 'Создать событие'
     event_map: 'Место проведения'
+    event_expired: 'Событие прошло'
   comments:
     comment:
       body: 'Текст комментария'

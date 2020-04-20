@@ -10,6 +10,8 @@ class Event < ApplicationRecord
   validates :address, presence: true
   validates :datetime, presence: true
 
+  scope :sorted, -> { order(datetime: :desc) }
+
   def visitors
     (subscribers + [user]).uniq
   end

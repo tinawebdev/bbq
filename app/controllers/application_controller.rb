@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end 
 
   def current_user_can_subscribe?(event)
-    current_user != event.user
+    current_user != event.user && (event.datetime > Time.now)
   end
 
   private

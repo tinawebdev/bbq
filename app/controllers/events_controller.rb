@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @events = Event.sorted
   end
 
   def show
