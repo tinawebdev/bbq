@@ -17,6 +17,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Пин-код доступа'
       comment:
         body: 'Текст комментария:'
         user_name: 'Имя:'
@@ -33,6 +34,7 @@ ru:
       created: 'Вы создали новое мероприятие'
       updated: 'Вы обновили мероприятие'
       destroyed: 'Вы удалили мероприятие :('
+      wrong_pincode: 'Неверный пин-код!'
     users:
       updated: 'Вы обновили свой профиль'
     comments:
@@ -93,7 +95,7 @@ ru:
     organized: 'Организовал:'
     profile: 'Профиль'
     user_has_not_organized_any_events_yet: 'Пользователь пока не организовал ни одного события'
-  event:    
+  event:
     change: 'Изменить'
     event_editing: 'Редактирование события'
     events: 'События'
@@ -101,6 +103,10 @@ ru:
     event_map: 'Место проведения'
     event_expired: 'Событие прошло'
     can_not_in_the_past: 'не могут быть ранее текущей даты'
+    pincode_access_only: 'Доступ только по пин-коду'
+    pincode: 'Введите пинкод:'
+    pincode_accept: 'Подтвердить'
+    back: 'На главную'
   comments:
     comment:
       body: 'Текст комментария'
