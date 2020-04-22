@@ -2,7 +2,12 @@
   <%= content_tag 'div', '', class: 'card-img-top event-photo', alt: "[event]",
       style: "background-image: url(#{event_photo(event)}); height: 180px;" %>
   <div class="card-body">
-    <h5 class="card-title"><%= link_to truncate(event.title, lenght: 10, separator: ' '), event_path(event) %></h5>
+    <div class="d-flex">
+      <% if event.pincode.present? %>
+        <%= content_tag(:span, fa_icon('lock'), class: "align-self-start badge badge-warning mr-2 mt-1") %>
+      <% end %>
+      <h5 class="card-title"><%= link_to truncate(event.title, lenght: 10, separator: ' '), event_path(event) %></h5>
+    </div>
     <small class="card-text"><%= event.address %></small>
   </div>
   <div class="card-footer d-inline-flex justify-content-between">
