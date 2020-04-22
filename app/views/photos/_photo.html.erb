@@ -4,11 +4,11 @@
       <%= link_to image_tag(photo.photo.thumb.url, class: "rounded", style: "object-fit: cover; width: 120px; height: 90px;"), photo.photo.url,
       data: {toggle: 'lightbox', title: "#{t('photos.author')}: #{ link_to photo.user.name, photo.user }", gallery: 'event-photos'} %>
     </div>
-    <div style="position: relative; top: -22px; right: -100px;">
+    <div class="badge-position">
       <% if current_user_can_edit?(photo) && photo.event.present? %>
         <%= link_to(
                 fa_icon('trash'), 
-                event_photo_path(photo.event, photo), class: "badge badge-danger",
+                event_photo_path(photo.event, photo), class: "badge badge-danger badge-radius",
                 method: :delete, data: {confirm: t('photos.destroy_confirm')}
             ) %>
       <% end %>
