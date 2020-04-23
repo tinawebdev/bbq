@@ -92,7 +92,8 @@ ru:
   user:
     edit_profile: 'Редактировать профиль'
     settings: 'Настройки'
-    organized: 'Организовал:'
+    organized: 'Мероприятия'
+    subscribed: 'Подписки'
     profile: 'Профиль'
     user_has_not_organized_any_events_yet: 'Пользователь пока не организовал ни одного события'
     user_has_not_subscribed_events: 'У пользователя нет подписок'
