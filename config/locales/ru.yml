@@ -96,7 +96,8 @@ ru:
     subscribed: 'Подписки'
     profile: 'Профиль'
     user_has_not_organized_any_events_yet: 'Пользователь пока не организовал ни одного события'
-  event:
+    user_has_not_subscribed_events: 'У пользователя нет подписок'
+    event:
     change: 'Изменить'
     event_editing: 'Редактирование события'
     events: 'События'

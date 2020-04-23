@@ -29,7 +29,9 @@
             <%= render partial: 'events/event', collection: @user.events %>
           </div>
         <% else %>
-          <p class="text-muted"><%= t('user.user_has_not_organized_any_events_yet') %></p>
+          <div class="text-center mt-5">
+            <p class="text-muted"><%= t('user.user_has_not_organized_any_events_yet') %></p>
+          </div>
         <% end %>
       </div>
     </div>
@@ -38,6 +40,10 @@
         <% if @user.subscriptions.any? %>
           <div class="d-flex flex-wrap justify-content-center mt-3">
             <%= render partial: 'events/event', collection: @user.subscribed_events %>
+          </div>
+        <% else %>
+          <div class="text-center mt-5">
+            <p class="text-muted"><%= t('user.user_has_not_subscribed_events') %></p>
           </div>
         <% end %>
       </div>
