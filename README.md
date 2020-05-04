@@ -1,6 +1,6 @@
 # bbq
 
-A Ruby on Rails application to invite friends to parties, events, bbq, etc. It lets you create an event, subscribe for updates, upload photos and share comments.
+A Ruby on Rails application, that allows you to create an event, pick a date, set a location, upload photos, share comments and invite your friends.
 
 ## Demo
 [mymegabbq.herokuapp.com](https://mymegabbq.herokuapp.com/)
